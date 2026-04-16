@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request an Appointment | Upstar Mental Health Services</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">Upstar Mental Health Services</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
+        <ul>
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="../services.html">Services</a></li>
+          <li><a class="nav-link" href="../about.html">About</a></li>
+          <li><a class="nav-link" href="../get-started/index.html">Get Started</a></li>
+          <li><a class="nav-link" href="../contact.html">Contact</a></li>
+          <li><a class="nav-link" href="../policies/index.html">Policies</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section">
+    <div class="container form-wrap">
+      <h1>Request an Appointment</h1>
+      <p>This is an appointment request form only (no self-scheduling). We’ll respond within 1 business day.</p>
+      <!-- Replace REPLACE_ME with your Formspree form ID in this single endpoint used across all site forms. -->
+      <form method="post" action="https://formspree.io/f/REPLACE_ME">
+        <input type="hidden" name="_subject" value="Appointment Request">
+        <input type="hidden" name="_next" value="success.html">
+        <label for="ra-name">Full name</label>
+        <input id="ra-name" name="name" autocomplete="name" required>
+        <label for="ra-email">Email</label>
+        <input id="ra-email" name="email" type="email" autocomplete="email" required>
+        <label for="ra-phone">Phone</label>
+        <input id="ra-phone" name="phone" type="tel" autocomplete="tel" required>
+        <label for="ra-time">Preferred day/time</label>
+        <input id="ra-time" name="preferred_time">
+        <label for="ra-notes">Anything we should know?</label>
+        <textarea id="ra-notes" name="notes"></textarea>
+        <button class="btn" type="submit">Submit Appointment Request</button>
+      </form>
+      <p><a href="index.html">Back to Get Started</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small">
+      <p>&copy; 2026 Upstar Mental Health Services. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
